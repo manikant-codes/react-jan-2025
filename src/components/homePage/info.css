@@ -1,0 +1,21 @@
+.contentContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+}
+
+.imageContainer {
+  order: 1;
+}
+
+.imageContainer img {
+  width: 100%;
+}
+
+.textContainer {
+  order: 2;
+}
+
+.textContainer h3 {
+  font-size: 2rem;
+}
