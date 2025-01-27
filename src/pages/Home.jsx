@@ -1,7 +1,8 @@
 import React from "react";
-import Navbar from "./components/common/Navbar";
-import MainImage from "./components/homePage/MainImage";
-import Info from "./components/homePage/Info";
+import Navbar from "../components/common/Navbar";
+import MainImage from "../components/homePage/MainImage";
+import Info from "../components/homePage/Info";
+import Services from "../components/homePage/Services";
 
 function Home() {
   return (
@@ -29,6 +30,7 @@ function Home() {
         textFirst
         showBtn
       />
+      <Services />
     </div>
   );
 }
