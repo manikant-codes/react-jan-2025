@@ -27,7 +27,7 @@ const data = [
 
 const cards = data.map((cardObject, index) => {
   return (
-    <div className={styles.card}>
+    <div key={cardObject.id} className={styles.card}>
       <h3>{cardObject.title}</h3>
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A, ex!</p>
       <button>Know More</button>
