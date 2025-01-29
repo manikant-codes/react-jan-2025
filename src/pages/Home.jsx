@@ -7,8 +7,6 @@ import Services from "../components/homePage/Services";
 function Home() {
   return (
     <div>
-      <Navbar />
-      <hr />
       <MainImage />
       <Info
         title="About Us"
