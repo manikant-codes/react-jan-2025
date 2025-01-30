@@ -7,6 +7,7 @@ function Layout() {
     <div>
       {/* Navbar */}
       <Navbar />
+      <hr />
       {/* Page */}
       <Outlet />
       {/* Footer */}
@@ -17,7 +18,7 @@ function Layout() {
           textAlign: "center"
         }}
       >
-        <p>&copy; All rights reserved.</p>
+        <p style={{ color: "white" }}>&copy; All rights reserved.</p>
       </div>
     </div>
   );
