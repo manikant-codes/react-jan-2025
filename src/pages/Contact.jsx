@@ -1,26 +1,35 @@
-import React from "react";
+import React, { useState } from "react";
 import Navbar from "../components/common/Navbar";
 
 function Contact() {
+  const [formState, setFormState] = useState({
+    email: "",
+    subject: "",
+    message: ""
+  });
 
   function submitForm(e) {
     e.preventDefault();
 
-    const formData = {
-      email: e.target.email.value,
-      subject: e.target.subject.value,
-      message: e.target.message.value
-    };
-
-    console.log(formData);
+    // const formData = {
+    //   email: e.target.email.value,
+    //   subject: e.target.subject.value,
+    //   message: e.target.message.value
+    // };
 
     fetch("url", {
       method: "POST",
+      body: JSON.stringify(formState),
       headers: {
         "Content-Type": "application/json"
-      },
-      body: JSON.stringify(formData)
-    })
+      }
+    });
+  }
+
+  function handleChange(e) {
+    setFormState({ ...formState, [e.target.name]: e.target.value });
+    console.log("e.target.name", e.target.name);
+    console.log("e.target.value", e.target.value);
   }
 
   return (
@@ -44,6 +53,8 @@ function Contact() {
             id="email"
             name="email"
             type="email"
+            value={formState.email}
+            onChange={handleChange}
             style={{ width: "100%", padding: "4px", marginTop: "4px" }}
           />
         </div>
@@ -54,6 +65,8 @@ function Contact() {
             id="subject"
             name="subject"
             type="text"
+            value={formState.subject}
+            onChange={handleChange}
             style={{ width: "100%", padding: "4px", marginTop: "4px" }}
           />
         </div>
@@ -63,8 +76,9 @@ function Contact() {
           <textarea
             id="message"
             name="message"
-            type="text"
             rows="6"
+            value={formState.message}
+            onChange={handleChange}
             style={{ width: "100%", padding: "4px", marginTop: "4px" }}
           ></textarea>
         </div>

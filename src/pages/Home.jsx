@@ -3,11 +3,12 @@ import Navbar from "../components/common/Navbar";
 import MainImage from "../components/homePage/MainImage";
 import Info from "../components/homePage/Info";
 import Services from "../components/homePage/Services";
+import MemoExample from "../components/MemoExample";
 
 function Home() {
   return (
     <div>
-      <MainImage />
+      {/* <MainImage />
       <Info
         title="About Us"
         subTitle="Our Story"
@@ -28,7 +29,8 @@ function Home() {
         textFirst
         showBtn
       />
-      <Services />
+      <Services /> */}
+      <MemoExample />
     </div>
   );
 }
