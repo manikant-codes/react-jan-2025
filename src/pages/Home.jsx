@@ -4,6 +4,7 @@ import MainImage from "../components/homePage/MainImage";
 import Info from "../components/homePage/Info";
 import Services from "../components/homePage/Services";
 import MemoExample from "../components/MemoExample";
+import DataFetching from "../components/DataFetching";
 
 function Home() {
   return (
@@ -30,7 +31,8 @@ function Home() {
         showBtn
       />
       <Services /> */}
-      <MemoExample />
+      {/* <MemoExample /> */}
+      <DataFetching />
     </div>
   );
 }

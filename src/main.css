@@ -19,3 +19,8 @@ button {
   font-size: 0.85rem;
   cursor: pointer;
 }
+
+.full-w {
+  width: 100%;
+  overflow: hidden;
+}
